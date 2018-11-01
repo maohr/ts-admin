@@ -1,0 +1,37 @@
+{
+  "name": "ts-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --mode development",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@types/js-cookie": "^2.1.0",
+    "@types/nprogress": "^0.0.29",
+    "@types/webpack-env": "^1.13.6",
+    "axios": "^0.18.0",
+    "element-ui": "^2.4.9",
+    "js-cookie": "^2.2.0",
+    "normalize.css": "^8.0.0",
+    "nprogress": "^0.2.0",
+    "vue": "^2.5.17",
+    "vue-class-component": "^6.0.0",
+    "vue-property-decorator": "^7.0.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vuex-class": "^0.3.1",
+    "vuex-module-decorators": "^0.4.3",
+    "webpack": "^4.17.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-typescript": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "typescript": "^3.0.0",
+    "vue-cli-plugin-element-ui": "^1.1.2",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
