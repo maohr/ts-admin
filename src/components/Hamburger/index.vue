@@ -36,7 +36,7 @@ export default class Hamburger extends Vue {
 }
 </script>
 
-<style scoped>
+<style>
 .hamburger {
   display: inline-block;
   cursor: pointer;

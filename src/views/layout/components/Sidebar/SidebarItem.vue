@@ -30,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import path from 'path';
+const path = require('path')
 import { Route } from 'vue-router';
 import { validateURL } from '@/utils/validate';
 import { Component, Vue, Prop } from 'vue-property-decorator';
