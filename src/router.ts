@@ -20,16 +20,6 @@ export default new Router({
       }],
     },
     {
-      path: 'external-link',
-      component: Layout,
-      children: [
-        {
-          path: 'https://github.com/Armour/vue-typescript-admin-template',
-          meta: { title: 'ExternalLink', icon: 'link' },
-        },
-      ],
-    },
-    {
       path: '/orders',
       component: Layout,
       name: '会员信息管理',
