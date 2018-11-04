@@ -1,15 +1,25 @@
 <template>
   <section class="app-main">
     <transition name="fade-transform" mode="out-in">
-      <router-view/>
+      <keep-alive :include="cacheList">
+        <router-view></router-view>
+      </keep-alive>
     </transition>
   </section>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { Vue, Component } from 'vue-property-decorator'
+import { TagsViewModule } from '@/store/modules/tagsView'
 
-export default class AppMain extends Vue {}
+@Component({
+  name: 'AppMain'
+})
+export default class AppMain extends Vue {
+  get cacheList() {
+    return TagsViewModule.cachedViews
+  }
+}
 </script>
 
 <style scoped>

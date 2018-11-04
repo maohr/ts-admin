@@ -10,7 +10,7 @@
         class="tags-view-item"
         @contextmenu.prevent.native="openMenu(tag,$event)">
         {{tag.title}}
-        <span class="el-icon-close" @click.prevent.stop="closeSelectedTag(tag)"/>
+        <span class="el-icon-close" @click.prevent.stop="closeSelectedTag(tag)" v-if="tag.name !== 'dashboard'" />
       </router-link>
     </scroll-pane>
     <ul v-show="visible" :style="{left:left+'px',top:top+'px'}" class="contextmenu">
@@ -82,7 +82,6 @@ export default class TagsView extends Vue {
   moveToCurrentTag() {
     setTimeout(() => {
       const tags = this.$refs.tag as ElBreadcrumbItem[];
-      console.log('tags', tags)
       for (const tag of tags) {
         const route = tag.to as Route;
         if (route.path === this.$route.path) {
