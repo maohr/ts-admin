@@ -123,8 +123,9 @@ export default class TagsView extends Vue {
     this.visible = true;
     this.selectedTag = tag;
     const offsetLeft = this.$el.getBoundingClientRect().left;
-    this.left = e.clientX - offsetLeft + 15;
+    this.left = e.clientX;
     this.top = e.clientY;
+    console.log(this.left, this.top, e.clientX, 'left', 'top')
   }
 
   closeMenu() {
