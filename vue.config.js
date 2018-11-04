@@ -1,3 +1,7 @@
+const path = require('path')
+const resolve = dir => {
+  return path.join(__dirname, dir)
+}
 module.exports = {
   baseUrl: process.env.NODE_ENV === 'production' ? '/' : '/',
   productionSourceMap: false,
@@ -11,6 +15,14 @@ module.exports = {
       }
     } else {
       // 为开发环境修改配置...
+      return {
+        
+      }
     }
+  },
+  chainWebpack: config => {
+    config.resolve.alias
+      .set('_c', resolve('src/components'))
+      .set('_v', resolve('src/views'))
   }
 }
