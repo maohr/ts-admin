@@ -25,7 +25,7 @@ export default class AppMain extends Vue {
 <style scoped>
 .app-main {
   /* 84 = navbar + tags*/
-  min-height: calc(100vh - 84px);
+  min-height: calc(100% - 85px);
   position: relative;
   overflow: hidden;
 }
