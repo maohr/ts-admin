@@ -31,13 +31,13 @@ export default new Router({
       children: [
         {
           path: 'order-list-1',
-          name: 'order',
+          name: 'order-1',
           component: () => import(/* webpackChunkName: "order-list-1" */ '_v/order-1.vue'),
           meta: {title: '订单列表1', icon: 'link'},
         },
         {
           path: 'order-list-2',
-          name: 'orderList',
+          name: 'order-2',
           component: () => import(/* webpackChunkName: "order-list-2" */ '_v/order-2.vue'),
           meta: {title: '订单列表2', icon: 'link'}
         },
