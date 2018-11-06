@@ -53,7 +53,7 @@ export default new Router({
           path: 'system-1',
           name: 'system-1',
           component: () => import(/* webpackChunkName: "account-list" */ '_v/system-1.vue'),
-          meta: {title: '系统管理-1', icon: 'link'},
+          meta: {title: '系统管理-1', icon: 'link', noCache: true},
         },
         {
           path: 'system-2',
