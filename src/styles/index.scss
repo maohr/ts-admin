@@ -150,3 +150,21 @@ svg {
   flex: 1;
   flex-direction: column;
 }
+.search-area {
+  position: relative;
+  margin-bottom: 16px;
+  transition: height .25s ease-in-out;
+  &.is-hidden {
+    height: 0 !important;
+  }
+  .search-arrow {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    margin: auto;
+    width: 50px;
+    padding: 0 17px;
+    cursor: pointer;
+  }
+}

@@ -1,8 +1,8 @@
 <template>
   <div class="main-content">
-    <div style="height: 50px;">
-
-    </div>
+    <search-area>
+      111
+    </search-area>
     <el-table
       :data="tableData"
       border
@@ -34,9 +34,12 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
-
+import SearchArea from '_c/SearchArea/index.vue'
 @Component({
-  name: "order-1"
+  name: "order-1",
+  components: {
+    SearchArea
+  }
 })
 export default class Order1 extends Vue {
   tableData = [
