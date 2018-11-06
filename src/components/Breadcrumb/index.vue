@@ -2,8 +2,8 @@
   <el-breadcrumb class="app-breadcrumb" separator="/">
     <transition-group name="breadcrumb">
       <el-breadcrumb-item v-for="(item,index) in levelList" v-if="item.meta.title" :key="index">
-        <span v-if="item.redirect==='noredirect'||index==levelList.length-1" class="no-redirect">{{ item.meta.title }}</span>
-        <router-link v-else :to="item.redirect||item.path">{{ item.meta.title }}</router-link>
+        <span v-if="!item.path.includes('/dashboard')" class="no-redirect">{{ item.meta.title }}</span>
+        <router-link v-else :to="item.path">{{ item.meta.title }}</router-link>
       </el-breadcrumb-item>
     </transition-group>
   </el-breadcrumb>
@@ -34,6 +34,9 @@ export default class Breadcrumb extends Vue {
     }
     this.levelList = matched;
   }
+  mounted () {
+    console.log('levelList', this.levelList)
+  }
 }
 </script>
 
@@ -43,6 +46,7 @@ export default class Breadcrumb extends Vue {
     font-size: 14px;
     line-height: 50px;
     margin-left: 10px;
+    outline: none;
     .no-redirect {
       color: #97a8be;
       cursor: text;
