@@ -52,7 +52,6 @@ export default {
     },
 
     onScrollableChange (layout) {
-      console.log('layout', layout)
       const cols = this.$el.querySelectorAll('colgroup > col[name=gutter]');
       for (let i = 0, j = cols.length; i < j; i++) {
         const col = cols[i];
