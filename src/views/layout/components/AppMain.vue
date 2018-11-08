@@ -27,7 +27,7 @@ export default class AppMain extends Vue {
   /* 84 = navbar + tags*/
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex: 1;
+  height: calc(100% - 85px);
+  padding: 8px;
 }
 </style>

@@ -7,7 +7,7 @@ Vue.use(Router);
 export default new Router({
   mode: 'hash',
   routes: [
-    { path: '/404', component: () => import(/* webpackChunkName: "404" */ '_v/404.vue') },
+    { path: '/404', component: () => import(/* webpackChunkName: "404" */ '_v/NotFound.vue') },
     {
       path: '/',
       component: Layout,
@@ -18,58 +18,43 @@ export default new Router({
         path: 'dashboard',
         name: 'dashboard',
         meta: {
-          title: 'index'
+          title: 'dashboard'
         },
         component: () => import(/* webpackChunkName: "dashboard" */ '_v/home.vue'),
       }],
     },
     {
-      path: '/orders',
+      path: '/project-manage',
       component: Layout,
       name: 'info',
-      meta: { title: '订单管理', icon: 'nested' },
+      meta: { title: '项目管理', icon: 'fa fa-gears' },
       children: [
         {
-          path: 'order-list-1',
-          name: 'order-1',
-          component: () => import(/* webpackChunkName: "order-list-1" */ '_v/order-1.vue'),
-          meta: {title: '订单列表1', icon: 'link'},
+          path: 'project-list',
+          name: 'project-list',
+          component: () => import(/* webpackChunkName: "project" */ '_v/project-manage/project-list.vue'),
+          meta: {title: '项目列表', icon: 'link'}
         },
         {
-          path: 'order-list-2',
-          name: 'order-2',
-          component: () => import(/* webpackChunkName: "order-list-2" */ '_v/order-2.vue'),
-          meta: {title: '订单列表2', icon: 'link'}
+          path: 'task-list',
+          name: 'task-list',
+          component: () => import(/* webpackChunkName: "project" */ '_v/project-manage/task-list.vue'),
+          meta: {title: '任务列表', icon: 'link'}
         },
-      ],
+        {
+          path: 'operation-history',
+          name: 'operation-history',
+          component: () => import(/* webpackChunkName: "project" */ '_v/project-manage/operation-history.vue'),
+          meta: {title: '操作历史', icon: 'link'}
+        },
+        {
+          path: 'project-task',
+          name: 'project-task',
+          component: () => import(/* webpackChunkName: "project" */ '_v/project-manage/project-task.vue'),
+          meta: {title: '项目任务列表', icon: 'link', hidden: true, noCache: true}
+        }
+      ]
     },
-    {
-      path: '/union-manager',
-      component: Layout,
-      name: 'system',
-      meta: { title: '系统管理', icon: 'nested' },
-      children: [
-        {
-          path: 'system-1',
-          name: 'system-1',
-          component: () => import(/* webpackChunkName: "account-list" */ '_v/system-1.vue'),
-          meta: {title: '系统管理-1', icon: 'link', noCache: true},
-        },
-        {
-          path: 'system-2',
-          name: 'system-2',
-          component: () => import(/* webpackChunkName: "app-list" */ '_v/system-2.vue'),
-          meta: {title: '系统管理-2', icon: 'link'},
-        },
-        {
-          path: 'system-3',
-          name: 'system-3',
-          component: () => import(/* webpackChunkName: "role-list" */ '_v/system-3.vue'),
-          meta: {title: '系统管理-3', icon: 'link'},
-        },
-      ],
-    },
-
     { path: '*', redirect: '/404' },
   ],
 });

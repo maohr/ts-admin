@@ -16,7 +16,12 @@
   position: relative;
   margin: 0 auto;
 }
-
+.el-dialog__body {
+  padding: 10px 20px;
+}
+.el-dialog__footer {
+  padding: 20px;
+}
 // element ui upload
 .upload-container {
   .el-upload {
@@ -27,19 +32,9 @@
     }
   }
 }
-
-.el-aside {
-  height: 100%;
+.el-form-item__content {
+  width: calc(100% - 82px);
 }
-.el-main {
-  padding: 8px;
-  display: flex;
-  flex: 1;
-}
-.el-header {
-  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
-  overflow: hidden;
-  .el-menu {
-    display: flex;
-  }
+.el-table__row.current-row {
+  font-weight: 700;
 }

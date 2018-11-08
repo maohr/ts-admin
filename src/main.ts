@@ -3,6 +3,7 @@ import Vue from 'vue';
 import 'normalize.css';
 import ElementUI from 'element-ui';
 import '@/styles/index.scss';
+import 'font-awesome/css/font-awesome.min.css'
 import '@/control';
 
 import App from '@/App.vue';

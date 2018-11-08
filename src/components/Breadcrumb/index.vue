@@ -34,9 +34,6 @@ export default class Breadcrumb extends Vue {
     }
     this.levelList = matched;
   }
-  mounted () {
-    console.log('levelList', this.levelList)
-  }
 }
 </script>
 
@@ -46,6 +43,7 @@ export default class Breadcrumb extends Vue {
     font-size: 14px;
     line-height: 50px;
     margin-left: 10px;
+    flex: 1;
     outline: none;
     .no-redirect {
       color: #97a8be;

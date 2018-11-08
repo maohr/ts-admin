@@ -120,12 +120,13 @@ export default class TagsView extends Vue {
   }
 
   openMenu(tag: Route, e: MouseEvent) {
-    this.visible = true;
-    this.selectedTag = tag;
-    const offsetLeft = this.$el.getBoundingClientRect().left;
-    this.left = e.clientX;
-    this.top = e.clientY;
-    console.log(this.left, this.top, e.clientX, 'left', 'top')
+    if (!tag.path.includes("dashboard")) {
+      this.visible = true;
+      this.selectedTag = tag;
+      const offsetLeft = this.$el.getBoundingClientRect().left;
+      this.left = e.clientX - offsetLeft;
+      this.top = e.clientY;
+    }
   }
 
   closeMenu() {

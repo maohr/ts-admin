@@ -20,10 +20,6 @@ body {
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
 }
 
-label {
-  font-weight: 700;
-}
-
 html {
   height: 100%;
   box-sizing: border-box;
@@ -48,21 +44,9 @@ a:active, a:focus {
 svg {
   outline: none;
 }
-
-.user-avatar {
-  height: 45px;
-  width: 45px;
-  border-radius: 45px;
-}
 .hamburger-container {
   padding-top: 15px;
   outline: none;
-}
-.avatar-container {
-  flex-basis: 65px;
-}
-.app-breadcrumb {
-  flex-basis: calc(100% - 65px);
 }
 .tags-view-container {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
@@ -144,27 +128,6 @@ svg {
     }
   }
 }
-
-.main-content {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-.search-area {
-  position: relative;
-  margin-bottom: 16px;
-  transition: height .25s ease-in-out;
-  &.is-hidden {
-    height: 0 !important;
-  }
-  .search-arrow {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -15px;
-    margin: auto;
-    width: 50px;
-    padding: 0 17px;
-    cursor: pointer;
-  }
+.btn-groups {
+  margin-bottom: 8px;
 }

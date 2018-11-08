@@ -2,8 +2,9 @@
   <el-scrollbar wrap-class="scrollbar-wrapper">
     <el-menu
       :show-timeout="200"
-      :default-active="$route.path"
+      :default-active="$route.name"
       :collapse="isCollapse"
+      unique-opened
       mode="vertical"
       background-color="#304156"
       text-color="#bfcbd9"
